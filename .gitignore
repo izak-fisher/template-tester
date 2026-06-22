@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# python / uv
+.venv/
+__pycache__/
+*.pyc
+
+# generated raw outputs (REPORT.md is committed as a sample; these are not)
+matrix_*.json
+pc_map_*.json
+report_t*.json
+*.log
+
+# macOS
+.DS_Store
