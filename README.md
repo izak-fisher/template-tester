@@ -9,13 +9,22 @@ works as intended.
 
 ## Setup
 
-Uses the `TARGET_API_KEY` (yamaha-stage-2) from `~/move-templates/.env`. No
-third-party packages — but run everything through **uv**:
+Copy `.env.example` to `.env` and set your Pneumatic API key (the `.env` file is
+gitignored):
 
 ```bash
-cd ~/yamaha/template-tester
+cp .env.example .env
+# then edit .env and set PNEUMATIC_API_KEY=<your key>
+```
+
+No third-party packages, but run everything through **uv**:
+
+```bash
 uv run python run_matrix.py            # both templates (20 + 7), amounts 1k/4k/10k
 ```
+
+`PNEUMATIC_API_KEY` is required; `PNEUMATIC_BASE_URL` is optional (defaults to the
+yamaha-stage-2 `:8001` endpoint). The key is read from `.env` next to the scripts.
 
 ## Main entrypoint: `run_matrix.py`
 
