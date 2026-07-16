@@ -6,11 +6,42 @@
 __pycache__/
 *.pyc
 
-# generated raw outputs (REPORT.md is committed as a sample; these are not)
+# macOS
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# CLIENT DATA -- never commit.
+# This repo publishes the generic harness only (pneumatic.py, roles.py,
+# _gui.py, _t69.py). Everything below embeds a specific customer's people,
+# cost centres, approval chains, or test findings.
+# ---------------------------------------------------------------------------
+
+# reports, findings, client-facing write-ups
+REPORT.md
+FINDINGS_*.md
+CLIENT_*.md
+RCBA_*.md
+GUI_TEST_*.md
+FIELDSET_*.md
+*_TEST_LOG_*.md
+*.pdf
+
+# screenshots (real workflows, real names, org structure)
+_shots/
+
+# working scripts: customer-specific scenarios, employee names, profit centers
+_*.py
+!_gui.py
+!_t69.py
+
+# session/agent notes -- customer specifics throughout
+CLAUDE.md
+
+# raw outputs, template snapshots, run artefacts
+_*.json
+_*.log
+_*.out
 matrix_*.json
 pc_map_*.json
 report_t*.json
 *.log
-
-# macOS
-.DS_Store
